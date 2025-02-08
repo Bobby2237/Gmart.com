@@ -1,0 +1,273 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.buttons {
+  background-color: #6B46C1;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 2px solid #2B6CB0;
+}
+
+.buttons:hover {
+  background-color: #2B6CB0;
+  transform: scale(1.05);
+  border-color: #6B46C1;
+}
+
+.nav a {
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #6B46C1;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.header img {
+  transition: transform 0.5s ease;
+}
+
+.header img:hover {
+  transform: scale(1.05);
+}
+
+.social-icons a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a {
+  color: #ffffff;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #2B6CB0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#contactustext {
+  color:#1d1b1b;
+  font-size: 1.2em; /* Reduced for mobile */
+  margin-top: 20px;
+}
+
+.buttons {
+  margin: 5px;
+  padding: 8px 16px; /* Reduced padding for mobile */
+  border-radius: 20px; /* Reduced border radius for mobile */
+  background-color: lightgrey;
+  border: none;
+  cursor: pointer;
+  width: 120px; /* Adjusted width for mobile */
+  font-size: small; /* Adjusted font size for mobile */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a {
+  color: white;
+}
+
+.buttons:hover {
+  background-color: #878787;
+  transform: scale(1.1); /* Slightly reduced scale for mobile */
+}
+
+.contact-table {
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.contact-table td {
+  border: 1px solid #ddd;
+  padding: 6px; /* Reduced padding for mobile */
+}
+
+.button-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.homebutton {
+  width: 70px; /* Reduced width for mobile */
+  height: 35px; /* Reduced height for mobile */
+}
+
+.contactus {
+  color: #1d1b1b;
+}
+
+.white-links a {
+  color: white;
+}
+
+.black-links a {
+  color: #1d1b1b;
+}
+
+.bookingheading {
+  margin-top: 10px;
+}
+
+main {
+  padding: 10px; /* Reduced padding for mobile */
+}
+
+.review-form, .reviews {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 90%; /* Adjusted width for mobile */
+  padding: 15px; /* Reduced padding for mobile */
+}
+
+.review-form h2, .reviews h2 {
+  color: #333;
+  font-size: 1em; /* Reduced font size for mobile */
+}
+
+.review-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-form label {
+  margin-top: 8px; /* Reduced margin for mobile */
+}
+
+.review-form input, .review-form select, .review-form textarea {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px; /* Reduced padding for mobile */
+}
+
+.review-form button {
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px; /* Reduced margin for mobile */
+  padding: 8px; /* Reduced padding for mobile */
+}
+
+.review-form button:hover {
+  background-color: #357ab7;
+}
+
+.reviews .review {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px; /* Reduced padding for mobile */
+}
+
+.reviews .review h3 {
+  margin: 0 0 8px; /* Reduced margin for mobile */
+}
+
+.reviews .review .rating {
+  color: #6B46C1;
+}
+
+.corner-button {
+  position: fixed;
+  bottom: 15px; /* Adjusted for mobile */
+  background-color: #2B6CB0;
+  color: white;
+  padding: 8px 16px; /* Reduced padding for mobile */
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.corner-button:hover {
+  background-color: #cc73ce;
+  transform: scale(1.05);
+}
+
+.left-corner {
+  left: 15px; /* Adjusted for mobile */
+}
+
+.right-corner {
+  right: 15px; /* Adjusted for mobile */
+}
+
+.side-frame {
+  position: fixed;
+  bottom: 60px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px; /* Adjusted padding for mobile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 90%; /* Adjusted width for mobile */
+  display: none;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+}
+
+.left-frame {
+  left: 15px; /* Adjusted for mobile */
+}
+
+.right-frame {
+  right: 15px; /* Adjusted for mobile */
+}
+
+.side-frame p {
+  margin: 0;
+}
+
+/* Media query for iPhone 11 Pro */
+@media only screen and (max-width: 414px) {
+  #contactustext {
+    font-size: 1em;
+  }
+
+  .buttons {
+    width: 100px;
+    font-size: small;
+  }
+
+  .homebutton {
+    width: 60px;
+    height: 30px;
+  }
+
+  .review-form, .reviews {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .review-form h2, .reviews h2 {
+    font-size: 0.9em;
+  }
+
+  .corner-button {
+    bottom: 10px;
+    padding: 6px 12px; /* Reduced padding for mobile */
+  }
+}

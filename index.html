@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmart | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="mobile.css">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #6B46C1;
+            padding: 10px;
+            z-index: 100;
+            position: sticky;
+            top: 0;
+            flex-wrap: wrap;
+            width: 160%;
+            box-shadow: 0 2px 4px rgba(43, 108, 176, 0.5);
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 30px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #2B6CB0;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0; 
+            position: relative;
+        }
+
+        .header img {
+            width: 80%;
+            max-width: 380px;
+            border-radius: 50%;
+            margin-top: 500px; 
+        }
+
+        .header .text-container {
+            margin-top: 10px;
+        }
+
+        .header h3 {
+            font-size: 2rem;
+            margin: 0;
+            color: #2B6CB0;
+        }
+
+        .business-hours {
+            text-align: center;
+            margin: 20px 0; 
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #6B46C1;
+            margin: 20px 0;
+        }
+
+
+        .work-text {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #2B6CB0;
+            margin: 20px 0;
+        }
+
+        .footer {
+            width: 191%; 
+            background-color: #2B6CB0; 
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            position: relative;
+            margin-top: 20px;
+            box-sizing: border-box; 
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 100000px) {
+            .footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+
+        .footer .copyright {
+            color: #1d1b1b;
+            font-size: 14px;
+        }
+
+        .footer .social-icons {
+            justify-content: center;
+            margin-left: 30px;
+        }
+
+        .footer .social-icons a {
+            color: #1d1b1b;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer .social-icons a:hover {
+            color: #ffffff;
+        }
+
+        .social-icons-top {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px; 
+            z-index: 1000; 
+        }
+
+        .social-icons-top a {
+            color: #000000; 
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons-top a:hover {
+            color: #ffffff; 
+        }
+
+        /* Mobile View Adjustments */
+        @media (max-width: 768px) {
+            .nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .header h3 {
+                font-size: 1.5rem;
+            }
+
+            .header img {
+                width: 90%;
+                max-width: 300px;
+                margin-top: 400px; 
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav {
+                display: flex; 
+                width: 100%; 
+            }
+
+            .nav a {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+
+            .header h3 {
+                font-size: 1.25rem;
+            }
+
+            .header img {
+                width: 100%;
+                max-width: 280px;
+                margin-top: 500px; 
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .footer .social-icons {
+                justify-content: center;
+                margin-left: 0;
+            }
+        }
+    </style>
+    <script>
+        // Ensure the page loads at the top
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <a href="aboutus.html"><b>About Us</b></a>
+            <a href="contactuspage.html"><b>Contact Us</b></a>
+            <a href="book.html"><b>Book Now</b></a>
+            <a href="https://www.instagram.com/gmanzz0?igsh=YTR4NjM1N2J5M2tk" target="_blank"><i class="fab fa-instagram"></i> <b>Instagram</b></a>
+            <a href="https://www.tiktok.com/@gbeast876?_t=ZT-8tjkBAFTeT0&_r=1" target="_blank"><i class="fab fa-tiktok"></i> <b>TikTok</b></a>
+            <a href="" target="_blank"><i class="fab fa-youtube"></i><b> YouTube</b></a>
+        </div>
+
+        <div class="header">
+            <img id="logo-image" src="2.png" alt="Hope's Braiding">
+            <div class="text-container">
+                <h3>Your satifaction is our happiness </h3>
+            </div>
+        </div>
+
+        <div class="business-hours">
+            <h3><u><b>Business Hours:</b></u><br>
+            Monday - Sunday<br>
+            7 AM - 9 PM<br>
+            <u>Address:</u><br>
+            </h3>
+        </div>
+
+        <hr>
+
+        <div class="work-text">
+            <small><h4>Some Of Our Work Here At gmart</h4></small>
+        </div>
+
+        <!-- Footer at the bottom of the page -->
+        <div class="footer">
+            <div class="copyright">
+                © 2025 All Rights Reserved | gmart
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/gmanzz0?igsh=YTR4NjM1N2J5M2tk" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@gbeast876?_t=ZT-8tjkBAFTeT0&_r=1" target="_blank"><i class="fab fa-tiktok" target="_blank"></i></a>
+                <a href="" target="_blank"><i class="fab fa-youtube" target="_blank"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

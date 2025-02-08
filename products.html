@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmart | Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="1.png">
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #6B46C1;
+            padding: 10px;
+            z-index: 100;
+            position: sticky;
+            top: 0;
+            flex-wrap: wrap;
+            width: 250%;
+            box-shadow: 0 2px 4px rgba(43, 108, 176, 0.5);
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 30px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .nav a:hover {
+            background-color: #2B6CB0;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin: 40px 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            overflow: hidden;
+            width: 300px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            color: #000000;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay-content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            width: 90%;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #6B46C1;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-info {
+            color: #000000;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #6B46C1;
+            font-weight: bold;
+        }
+
+        .additional-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .additional-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .additional-images img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                width: 100%;
+                margin-left: 0;
+            }
+            
+            .nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <a href="aboutus.html"><b>About Us</b></a>
+            <a href="contactuspage.html"><b>Contact Us</b></a>
+            <a href="index.html"><b>Home</b></a>
+            <a href="https://www.instagram.com/gmanzz0?igsh=YTR4NjM1N2J5M2tk" target="_blank"><i class="fab fa-instagram"></i> <b>Instagram</b></a>
+            <a href="https://www.tiktok.com/@gbeast876?_t=ZT-8tjkBAFTeT0&_r=1" target="_blank"><i class="fab fa-tiktok"></i> <b>TikTok</b></a>
+            <a href="https://www.youtube.com/@GabrielmcCants" target="_blank"><i class="fab fa-youtube"></i><b> YouTube</b></a>
+        </div>
+
+        <h1>Our Products</h1>
+
+        <div class="container">
+            <div class="product-card" onclick="showProduct()">
+                <img src="Product Photos/Shoes/IMG_7956.jpeg" alt="Yeezy Slides">
+                <h3>Yeezy Slides</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeOverlay(event)">
+        <div class="overlay-content">
+            <button class="close-button" onclick="closeOverlay(event)">Close</button>
+            <div class="product-details">
+                <div class="product-images">
+                    <img id="main-product-image" src="Product Photos/Shoes/IMG_7956.jpeg" alt="Product Image" style="width: 100%; max-width: 500px; height: auto; display: block; margin: 0 auto;">
+                </div>
+                <div class="product-info">
+                    <h2>Yeezy Slides</h2>
+                    <p class="price">$54.99</p>
+                    <p>Premium athletic shoes designed for maximum comfort and performance. Features advanced cushioning technology and breathable mesh upper.</p>
+                </div>
+                <div class="additional-images">
+                    <img src="Product Photos/Shoes/IMG_7957.jpeg" alt="Classic Sport Running Shoes 2" onclick="updateMainImage(this.src)">
+                    <img src="Product Photos/Shoes/IMG_7958.jpeg" alt="Classic Sport Running Shoes 3" onclick="updateMainImage(this.src)">
+                    <img src="Product Photos/Shoes/IMG_7959.jpeg" alt="Classic Sport Running Shoes 4" onclick="updateMainImage(this.src)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showProduct() {
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
+        function closeOverlay(event) {
+            if (event.target.classList.contains('overlay') || event.target.classList.contains('close-button')) {
+                document.getElementById('overlay').style.display = 'none';
+            }
+        }
+
+        function updateMainImage(src) {
+            document.getElementById('main-product-image').src = src;
+        }
+    </script>
+</body>
+</html>
